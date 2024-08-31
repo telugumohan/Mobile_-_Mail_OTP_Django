@@ -75,17 +75,17 @@ WSGI_APPLICATION = 'otp_registration.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST', default='localhost'),
-        'PORT': config('DB_PORT', default='3306'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),  # Replace with your database name
+        'USER': config('DB_USER'),  # Replace with your PostgreSQL username
+        'PASSWORD': config('DB_PASSWORD'),  # Replace with your PostgreSQL password
+        'HOST': config('DB_HOST', default='localhost'),  # Replace if your database is hosted elsewhere
+        'PORT': config('DB_PORT', default='5432'),  # Default PostgreSQL port is 5432
     }
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
